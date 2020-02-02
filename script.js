@@ -61,19 +61,25 @@ function time() {
 
         // if statement to ditermin if in the past hour's
         if (hour < currentHour) {
+            // adds grey to blocks
             $(this).addClass("past");
         }
 
         //else if statement to ditermin if in the present hour
         else if (hour === currentHour) {
+            // removes grey to blocks
             $(this).removeClass("past");
+            // adds red to blocks
             $(this).addClass("present");
         }
 
         // else statement to ditermin if in the future's
         else {
+            // removes grey to blocks
             $(this).removeClass("past");
+            // removes red to blocks
             $(this).removeClass("present");
+            // adds green to blocks
             $(this).addClass("future");
         }
 
